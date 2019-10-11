@@ -1,0 +1,18 @@
+
+cidades = int(input())
+grafo = {i:[] for i in range(1, cidades+1)} #criação do grafo em dic, para ter melhor acesso dos vizinhos
+for i in range(cidades-1):
+    u, v = map(int, input().split())
+    grafo[v].append(u)
+    grafo[u].append(v)
+
+    
+
+#criação da busca em profundidade
+def marca_cidade(grafo):
+    macador = cidades*[-1] #recebe o valor de cidaded r marca como não visitadas
+    for x in range (cidades-1)
+    
+    
+    a lógica é passar uma busca em profundidade, e com um marcador contabilizar as cidades para dividir 
+    as cidades da melhor forma possível
