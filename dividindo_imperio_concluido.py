@@ -27,7 +27,6 @@ while len(grafo) > 3:
         grafo[y].remove(x)
     del grafo[x]
     del grafoPontos[x]
-    print(grafoPontos)
     
   fila_folha = []
 
