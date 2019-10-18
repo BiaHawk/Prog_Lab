@@ -1,20 +1,16 @@
 n = int(input())
 alturas = [int(x) for x in input().split()]
-copia = [x for x in alturas]
-copia.pop()
-minimo_valor_corte = 2
+maximo_papel = 2 #2 é o valor minimo de papeis que o pior corte pode ter
 
-def somar(lista):
-  soma = 0
-  for valor in lista:
-    soma += valor
-  return soma
-
-for y in copia:
-    pico = somar(x > y and (index == 0 or alturas[index - 1] <= y) for index, x in enumerate(alturas)) + 1
-    if minimo_valor_corte < pico:
-        minimo_valor_corte = pico
+#iterar por todas as alturas e adiciona 1 ao contador quando a altura superar a altura de corte
+for y in alturas[:-1]:
+  contador = 1
+  for x in range(len(alturas)):
+    if alturas[x] > y:
+      if x == 0 or alturas[x-1] <= y:
+        contador +=1
+  
+  if maximo_papel < contador:
+      maximo_papel = contador
         
-print(minimo_valor_corte) 
-
-    
+print(contador) 
